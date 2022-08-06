@@ -36,7 +36,7 @@ impl Trie {
         self.nodes[node_id as usize].end_string_id.push(word_id);
     }
 
-    pub fn search(&self, string: &str, prefix: bool) -> bool {
+    pub fn search(&self, string: &str) -> bool {
         let mut node_id = 0_i32;
         for c in string.chars() {
             let next_id = self.nodes[node_id as usize].next_node_id.get(&c);

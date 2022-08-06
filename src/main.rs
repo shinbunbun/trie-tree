@@ -21,7 +21,7 @@ fn main() {
         };
         let input_string = input_string.trim();
 
-        let result = trie.search(input_string, false);
+        let result = trie.search(input_string);
         if result {
             println!("Yes");
         } else {
